@@ -39,4 +39,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-streamlit run your_app.py
+streamlit run app.py
