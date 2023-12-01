@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import pickle
-model = pickle.load(open("https://github.com/phuongnhi201104/doancuoiky-/blob/main/model.sav", "rb"))
+model = pickle.load(open("C:\Users\LAPTOP DELL\Downloads\model.sav", "rb"))
 def predict(input_data):
     # Preprocess the input data
     # ...
