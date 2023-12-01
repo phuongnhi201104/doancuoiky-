@@ -1,7 +1,12 @@
 import pandas as pd
 import streamlit as st
 import pickle
-model = pickle.load(open("https://github.com/phuongnhi201104/doancuoiky-/blob/main/model.sav", "rb"))
+import requests
+url = "https://raw.githubusercontent.com/phuongnhi201104/doancuoiky-/blob/main/model.sav"
+response = requests.get(url)
+with open("model.sav", "wb") as f:
+    f.write(response.content)
+model = pickle.load(open("model.sav", "rb"))
 def predict(input_data):
     # Preprocess the input data
     # ...
